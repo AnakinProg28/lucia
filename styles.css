@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 550px;
+    max-width: 95vw; /* Para que no se pase del ancho de pantalla */
     height: 190px;
     background-color: #ff0044;
     border-radius: 10px;
@@ -141,4 +142,34 @@ img[alt="Imagen decorativa"] {
 
 p {
     margin-bottom: 30px; /* Más espacio debajo del texto, si lo deseas */
+}
+
+/* Responsive para celulares */
+@media (max-width: 600px) {
+    .contenedor {
+        flex-direction: column;
+        width: 98vw;
+        height: auto;
+        padding: 10px 0;
+    }
+    #foto {
+        width: 50vw;
+        margin: 10px 0;
+    }
+    .animacion {
+        font-size: 14px;
+        text-align: center;
+    }
+    .boton {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    img[alt="Imagen decorativa"] {
+        max-width: 95vw;
+        margin: 20px auto 0 auto;
+    }
+    p {
+        font-size: 14px !important;
+        margin: 15px 10px 0 10px !important;
+    }
 }
