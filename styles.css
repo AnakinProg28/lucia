@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    flex-direction: column; /* Apila todo en columna */
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: flex-start; /* Comienza desde arriba */
+    min-height: 100vh;
+    background-color: #dbcaca;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    margin-top: 40px;    /* Agrega espacio arriba */
+    margin-bottom: 40px; /* Ya tienes espacio abajo */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 190px;
+    background-color: #ff0044;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#foto {
+    width: 18%;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-right: 20px; /* Espacio a la derecha de la foto */
+}
+.animacion {.contenedor {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en fila */
+    justify-content: flex-start;
+    align-items: center;
+    width: 550px;
+    height: 190px;
+    background-color: #ff0044;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#foto {
+    width: 18%;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-right: 20px; /* Espacio a la derecha de la foto */
+}
+    font-size: 18px;
+    font-weight: bold;
+   
+}
+.animacion.animar{
+    animation: efecto 2s;
+}
+
+@keyframes efecto {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) rotate(10deg);
+        opacity: 0.5;
+    }
+}
+.contenedor.expandir {
+    animation: agrandarContenedor 0.8s forwards;
+}
+
+@keyframes agrandarContenedor {
+    to {
+        width: 900px;
+        height: 500px;
+    }
+}
+.boton {
+    padding: 12px 28px;
+    background-color: #fff;
+    color: #ff0044;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    margin-left: 20px;
+}
+
+.boton:hover {
+    background-color: #ff3366;
+    color: #fff;
+    transform: scale(1.08);
+}
+.corazon {
+    position: fixed;
+    bottom: -50px;
+    width: 30px;
+    height: 30px;
+    background: red;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    animation: flotar 6s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+}
+.corazon::before,
+.corazon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+}
+.corazon::before {
+    top: -15px;
+    left: 0;
+}
+.corazon::after {
+    left: 15px;
+    top: 0;
+}
+@keyframes flotar {
+    0% {
+        bottom: -50px;
+        opacity: 0.7;
+    }
+    100% {
+        bottom: 110vh;
+        opacity: 0;
+    }
+}
+.marco-decorativo, /* Si usas una clase para la imagen decorativa */
+img[alt="Imagen decorativa"] {
+    margin-bottom: 30px; /* Más espacio debajo de la imagen decorativa */
+}
+
+p {
+    margin-bottom: 30px; /* Más espacio debajo del texto, si lo deseas */
+}
